@@ -107,9 +107,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import { IResp } from '@/types';
 import { IProfile } from '@/types/schema';
+import Vue from 'vue';
 export default Vue.extend({
   name: 'PageProfileSettings',
   layout: 'admin',

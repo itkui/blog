@@ -24,8 +24,8 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue';
 import { IProfile, ISetting } from '@/types/schema';
+import Vue from 'vue';
 export default Vue.extend({
   name: 'PageProfile',
   async asyncData ({ $axios, error }) {

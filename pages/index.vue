@@ -6,13 +6,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import { allCategoryItem } from '@/server/models/category';
 import { IResp } from '@/types';
 import { ISetting } from '@/types/schema';
 import PostList from '~/components/PostList.vue';
 import CategoryList from '~/components/CategoryList.vue';
-
+import Vue from 'vue';
 export default Vue.extend({
   components: {
     CategoryList,

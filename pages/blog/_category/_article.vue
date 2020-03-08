@@ -74,13 +74,13 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue';
-import moment from 'moment';
 import 'highlight.js/styles/tomorrow.css';
 import CommentList from '@/components/CommentList.vue';
 import PopArticles from '@/components/widgets/popArticles.vue';
 import ArticleContent from '@/components/ArticleContent.vue';
 import { IPost, ISetting } from '@/types/schema';
+import Vue from 'vue';
+import moment from 'moment';
 interface IHeading3 {
     href: string;
     title: string;

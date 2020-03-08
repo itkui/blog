@@ -333,11 +333,11 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue';
-import moment from 'moment';
 import { FieldDecoratorOptions } from 'ant-design-vue/types/form/form';
 import { IResp } from '@/types';
 import { ICategory } from '@/types/schema';
+import Vue from 'vue';
+import moment from 'moment';
 export default Vue.extend({
   name: 'PageArticleManage',
   layout: 'admin',

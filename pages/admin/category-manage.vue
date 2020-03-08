@@ -131,9 +131,9 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue';
 import { IResp } from '@/types';
 import { allCategoryItem, otherCategoryItem } from '@/server/models/category';
+import Vue from 'vue';
 export default Vue.extend({
   name: 'PageCategoryManage',
   layout: 'admin',
