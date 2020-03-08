@@ -3,22 +3,22 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _73794524 = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages_admin_index" */))
-const _a11242e0 = () => interopDefault(import('..\\pages\\guestbook.vue' /* webpackChunkName: "pages_guestbook" */))
-const _6cd77938 = () => interopDefault(import('..\\pages\\profile.vue' /* webpackChunkName: "pages_profile" */))
-const _020c3fe9 = () => interopDefault(import('..\\pages\\search.vue' /* webpackChunkName: "pages_search" */))
-const _7191a2c2 = () => interopDefault(import('..\\pages\\admin\\article-edit.vue' /* webpackChunkName: "pages_admin_article-edit" */))
-const _36286d3a = () => interopDefault(import('..\\pages\\admin\\article-manage.vue' /* webpackChunkName: "pages_admin_article-manage" */))
-const _6a5a4834 = () => interopDefault(import('..\\pages\\admin\\category-manage.vue' /* webpackChunkName: "pages_admin_category-manage" */))
-const _1de98031 = () => interopDefault(import('..\\pages\\admin\\comment-manage.vue' /* webpackChunkName: "pages_admin_comment-manage" */))
-const _9e5691e2 = () => interopDefault(import('..\\pages\\admin\\guestbook-manage.vue' /* webpackChunkName: "pages_admin_guestbook-manage" */))
-const _aba08036 = () => interopDefault(import('..\\pages\\admin\\profile-settings.vue' /* webpackChunkName: "pages_admin_profile-settings" */))
-const _156dc35a = () => interopDefault(import('..\\pages\\admin\\system-settings.vue' /* webpackChunkName: "pages_admin_system-settings" */))
-const _be2fd882 = () => interopDefault(import('..\\pages\\auth\\change-password.vue' /* webpackChunkName: "pages_auth_change-password" */))
-const _5badd950 = () => interopDefault(import('..\\pages\\auth\\login.vue' /* webpackChunkName: "pages_auth_login" */))
-const _223d2890 = () => interopDefault(import('..\\pages\\blog\\_category\\index.vue' /* webpackChunkName: "pages_blog__category_index" */))
-const _7542027e = () => interopDefault(import('..\\pages\\blog\\_category\\_article.vue' /* webpackChunkName: "pages_blog__category__article" */))
-const _5d8764be = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _734e1d8e = () => interopDefault(import('../pages/admin/index.vue' /* webpackChunkName: "pages/admin/index" */))
+const _35c4dc28 = () => interopDefault(import('../pages/guestbook.vue' /* webpackChunkName: "pages/guestbook" */))
+const _ed900660 = () => interopDefault(import('../pages/profile.vue' /* webpackChunkName: "pages/profile" */))
+const _2c40e951 = () => interopDefault(import('../pages/search.vue' /* webpackChunkName: "pages/search" */))
+const _1b16b0ea = () => interopDefault(import('../pages/admin/article-edit.vue' /* webpackChunkName: "pages/admin/article-edit" */))
+const _103088c5 = () => interopDefault(import('../pages/admin/article-manage.vue' /* webpackChunkName: "pages/admin/article-manage" */))
+const _31ce31bb = () => interopDefault(import('../pages/admin/category-manage.vue' /* webpackChunkName: "pages/admin/category-manage" */))
+const _101cc888 = () => interopDefault(import('../pages/admin/comment-manage.vue' /* webpackChunkName: "pages/admin/comment-manage" */))
+const _29441bda = () => interopDefault(import('../pages/admin/guestbook-manage.vue' /* webpackChunkName: "pages/admin/guestbook-manage" */))
+const _229f24b0 = () => interopDefault(import('../pages/admin/profile-settings.vue' /* webpackChunkName: "pages/admin/profile-settings" */))
+const _5c447428 = () => interopDefault(import('../pages/admin/system-settings.vue' /* webpackChunkName: "pages/admin/system-settings" */))
+const _558981cc = () => interopDefault(import('../pages/auth/change-password.vue' /* webpackChunkName: "pages/auth/change-password" */))
+const _de392b2a = () => interopDefault(import('../pages/auth/login.vue' /* webpackChunkName: "pages/auth/login" */))
+const _b28242c8 = () => interopDefault(import('../pages/blog/_category/index.vue' /* webpackChunkName: "pages/blog/_category/index" */))
+const _589bf15d = () => interopDefault(import('../pages/blog/_category/_article.vue' /* webpackChunkName: "pages/blog/_category/_article" */))
+const _5ace518e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -38,67 +38,67 @@ export const routerOptions = {
 
   routes: [{
     path: "/admin",
-    component: _73794524,
+    component: _734e1d8e,
     name: "admin"
   }, {
     path: "/guestbook",
-    component: _a11242e0,
+    component: _35c4dc28,
     name: "guestbook"
   }, {
     path: "/profile",
-    component: _6cd77938,
+    component: _ed900660,
     name: "profile"
   }, {
     path: "/search",
-    component: _020c3fe9,
+    component: _2c40e951,
     name: "search"
   }, {
     path: "/admin/article-edit",
-    component: _7191a2c2,
+    component: _1b16b0ea,
     name: "admin-article-edit"
   }, {
     path: "/admin/article-manage",
-    component: _36286d3a,
+    component: _103088c5,
     name: "admin-article-manage"
   }, {
     path: "/admin/category-manage",
-    component: _6a5a4834,
+    component: _31ce31bb,
     name: "admin-category-manage"
   }, {
     path: "/admin/comment-manage",
-    component: _1de98031,
+    component: _101cc888,
     name: "admin-comment-manage"
   }, {
     path: "/admin/guestbook-manage",
-    component: _9e5691e2,
+    component: _29441bda,
     name: "admin-guestbook-manage"
   }, {
     path: "/admin/profile-settings",
-    component: _aba08036,
+    component: _229f24b0,
     name: "admin-profile-settings"
   }, {
     path: "/admin/system-settings",
-    component: _156dc35a,
+    component: _5c447428,
     name: "admin-system-settings"
   }, {
     path: "/auth/change-password",
-    component: _be2fd882,
+    component: _558981cc,
     name: "auth-change-password"
   }, {
     path: "/auth/login",
-    component: _5badd950,
+    component: _de392b2a,
     name: "auth-login"
   }, {
     path: "/blog/:category?",
-    component: _223d2890,
+    component: _b28242c8,
     name: "blog-category"
   }, {
     path: "/blog/:category?/:article",
-    component: _7542027e,
+    component: _589bf15d,
     name: "blog-category-article"
   }, {
     path: "/",
-    component: _5d8764be,
+    component: _5ace518e,
     name: "index"
   }],
 

@@ -12,17 +12,6 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_swplugin_464f5b6c from 'nuxt_plugin_swplugin_464f5b6c' // Source: .\\sw.plugin.js (mode: 'client')
-import nuxt_plugin_axios_200a8d31 from 'nuxt_plugin_axios_200a8d31' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ..\\plugins\\axios (mode: 'server')
-import nuxt_plugin_antdesign_75603550 from 'nuxt_plugin_antdesign_75603550' // Source: ..\\plugins\\ant-design (mode: 'all')
-import nuxt_plugin_fontawesome_999c0e4e from 'nuxt_plugin_fontawesome_999c0e4e' // Source: ..\\plugins\\font-awesome (mode: 'all')
-import nuxt_plugin_index_33bf821f from 'nuxt_plugin_index_33bf821f' // Source: ..\\plugins\\web-font\\index (mode: 'all')
-import nuxt_plugin_eventbus_bb49754e from 'nuxt_plugin_eventbus_bb49754e' // Source: ..\\plugins\\event-bus (mode: 'all')
-import nuxt_plugin_baidustats_28060ff9 from 'nuxt_plugin_baidustats_28060ff9' // Source: ..\\plugins\\baidu-stats (mode: 'client')
-import nuxt_plugin_tuieditor_7f97c5c6 from 'nuxt_plugin_tuieditor_7f97c5c6' // Source: ..\\plugins\\tui-editor (mode: 'client')
-import nuxt_plugin_plugin_0c6e1420 from 'nuxt_plugin_plugin_0c6e1420' // Source: .\\auth\\plugin.js (mode: 'all')
-
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 
@@ -136,39 +125,6 @@ async function createApp (ssrContext) {
     ssrContext
   })
 
-  const inject = function (key, value) {
-    if (!key) {
-      throw new Error('inject(key, value) has no key provided')
-    }
-    if (value === undefined) {
-      throw new Error('inject(key, value) has no value provided')
-    }
-
-    key = '$' + key
-    // Add into app
-    app[key] = value
-
-    // Add into store
-    store[key] = app[key]
-
-    // Check if plugin not already installed
-    const installKey = '__nuxt_' + key + '_installed__'
-    if (Vue[installKey]) {
-      return
-    }
-    Vue[installKey] = true
-    // Call Vue.use() to install the plugin into vm
-    Vue.use(() => {
-      if (!Object.prototype.hasOwnProperty.call(Vue, key)) {
-        Object.defineProperty(Vue.prototype, key, {
-          get () {
-            return this.$root.$options[key]
-          }
-        })
-      }
-    })
-  }
-
   if (process.client) {
     // Replace store state before plugins execution
     if (window.__NUXT__ && window.__NUXT__.state) {
@@ -177,46 +133,6 @@ async function createApp (ssrContext) {
   }
 
   // Plugin execution
-
-  if (process.client && typeof nuxt_plugin_swplugin_464f5b6c === 'function') {
-    await nuxt_plugin_swplugin_464f5b6c(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_axios_200a8d31 === 'function') {
-    await nuxt_plugin_axios_200a8d31(app.context, inject)
-  }
-
-  if (process.server && typeof nuxt_plugin_axios_2228ef02 === 'function') {
-    await nuxt_plugin_axios_2228ef02(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_antdesign_75603550 === 'function') {
-    await nuxt_plugin_antdesign_75603550(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_fontawesome_999c0e4e === 'function') {
-    await nuxt_plugin_fontawesome_999c0e4e(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_index_33bf821f === 'function') {
-    await nuxt_plugin_index_33bf821f(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_eventbus_bb49754e === 'function') {
-    await nuxt_plugin_eventbus_bb49754e(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_baidustats_28060ff9 === 'function') {
-    await nuxt_plugin_baidustats_28060ff9(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_tuieditor_7f97c5c6 === 'function') {
-    await nuxt_plugin_tuieditor_7f97c5c6(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_plugin_0c6e1420 === 'function') {
-    await nuxt_plugin_plugin_0c6e1420(app.context, inject)
-  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {
