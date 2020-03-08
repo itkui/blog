@@ -118,4 +118,3 @@ const DEFAULTS = {
   globalToken: true,
   tokenName: 'Authorization'
 }
-

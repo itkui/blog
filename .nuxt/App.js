@@ -7,16 +7,21 @@ import {
 } from './utils'
 
 import NuxtLoading from './components/nuxt-loading.vue'
-import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import _77068119 from '../layouts/admin.vue'
-import _2d217e9e from '../layouts/auth.vue'
-import _6f6c098b from '../layouts/default.vue'
+import '..\\node_modules\\ant-design-vue\\dist\\antd.less'
+
+import '..\\node_modules\\@fortawesome\\fontawesome-svg-core\\styles.css'
+
+import '..\\static\\main.css'
+
+import _77068119 from '..\\layouts\\admin.vue'
+import _2d217e9e from '..\\layouts\\auth.vue'
+import _6f6c098b from '..\\layouts\\default.vue'
 
 const layouts = { "_admin": _77068119,"_auth": _2d217e9e,"_default": _6f6c098b }
 
 export default {
-  head: {"meta":[],"link":[],"style":[],"script":[]},
+  head: {"title":"iBlog","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"基于 Node.js 的开源个人博客系统。"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"iblog"},{"hid":"author","name":"author","content":"Sky.Sun"},{"hid":"theme-color","name":"theme-color","content":"#f80"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"iblog"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"iblog"},{"hid":"og:description","name":"og:description","property":"og:description","content":"基于 Node.js 的开源个人博客系统。"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.714906a0.json"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
 
   render (h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
@@ -50,7 +55,7 @@ export default {
       }
     }, [
       loadingEl,
-      h(NuxtBuildIndicator),
+
       transitionEl
     ])
   },
@@ -160,10 +165,6 @@ export default {
     },
 
     setLayout (layout) {
-      if(layout && typeof layout !== 'string') {
-        throw new Error('[nuxt] Avoid using non-string value as layout property.')
-      }
-
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
