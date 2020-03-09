@@ -1,7 +1,7 @@
 import { IBlogConfig } from '@/types';
 
 const config: IBlogConfig = {
-  host: '0.0.0.0',
+  host: '127.0.0.1',
   port: 9000,
   enableHTTPS: false,
   mongoUrl: 'mongodb://localhost:27017/iBlog_v2',
