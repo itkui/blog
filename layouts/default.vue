@@ -46,7 +46,7 @@
         </div>
       </div>
       <nuxt />
-      <layout-footer :show-login="true" />
+      <layout-footer :show-login="false" />
       <div class="fixed-tools">
         <div :class="{ 'show-to-top': showToTop }" class="to-top" @click="toTop">
           <web-font icon="arrow-to-top" />

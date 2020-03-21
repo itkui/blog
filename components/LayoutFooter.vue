@@ -1,10 +1,6 @@
 <template>
   <div class="layout-footer">
-    {{ year }} © Powered by
-    <a
-      href="https://github.com/eshengsky/iBlog"
-      target="_blank"
-    >iBlog</a>
+    {{ year }} © Powered by ITKui
     <span v-if="settings.recordInfo" class="record-info">
       |
       <a href="http://www.beian.miit.gov.cn">{{ settings.recordInfo }}</a>
