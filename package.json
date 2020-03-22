@@ -1,8 +1,8 @@
 {
-  "name": "iblog",
-  "version": "2.0.0",
+  "name": "blog-of-itkui",
+  "version": "1.0.1",
   "description": "基于 Node.js 的开源个人博客系统。",
-  "author": "Sky.Sun",
+  "author": "itkui",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .ts,.js,.vue .",
@@ -66,5 +66,23 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0"
-  }
+  },
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itkui/blog.git"
+  },
+  "keywords": [
+    "iBlog",
+    "vue",
+    "nuxt",
+    "express",
+    "node",
+    "typescript"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itkui/blog/issues"
+  },
+  "homepage": "https://github.com/itkui/blog#readme"
 }

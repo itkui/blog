@@ -1,0 +1,5 @@
+# robots.txt generated at http://www.aizhan.com
+User-agent: *
+Allow: /
+Disallow: /admin
+Sitemap:https://dingshiyi.cn/sitemap.xml
