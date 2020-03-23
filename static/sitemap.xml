@@ -81,6 +81,12 @@
 <changefreq>Always</changefreq>
 </url>
 <url>
+<loc>https://www.dingshiyi.cn/blog/html/rem</loc>
+<priority>0.60</priority>
+<lastmod>2020-03-19</lastmod>
+<changefreq>Always</changefreq>
+</url>
+<url>
 <loc>https://www.dingshiyi.cn/blog/reg-exp</loc>
 <priority>0.80</priority>
 <lastmod>2020-03-19</lastmod>
@@ -119,6 +125,12 @@
 <url>
 <loc>https://www.dingshiyi.cn/blog/linux</loc>
 <priority>0.80</priority>
+<lastmod>2020-03-19</lastmod>
+<changefreq>Always</changefreq>
+</url>
+<url>
+<loc>https://www.dingshiyi.cn/blog/linux/install</loc>
+<priority>0.60</priority>
 <lastmod>2020-03-19</lastmod>
 <changefreq>Always</changefreq>
 </url>

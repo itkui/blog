@@ -11,6 +11,7 @@ https://www.dingshiyi.cn/blog/css3
 https://www.dingshiyi.cn/blog/css3/animate
 https://www.dingshiyi.cn/blog/html
 https://www.dingshiyi.cn/blog/html/layout
+https://www.dingshiyi.cn/blog/html/rem
 https://www.dingshiyi.cn/blog/reg-exp
 https://www.dingshiyi.cn/blog/reg-exp/reg-exp
 https://www.dingshiyi.cn/blog/http
@@ -18,6 +19,7 @@ https://www.dingshiyi.cn/blog/http/web-worker
 https://www.dingshiyi.cn/blog/git
 https://www.dingshiyi.cn/blog/git/change-remote
 https://www.dingshiyi.cn/blog/linux
+https://www.dingshiyi.cn/blog/linux/install
 https://www.dingshiyi.cn/blog/linux/firewall
 https://www.dingshiyi.cn/blog/babel
 https://www.dingshiyi.cn/blog/babel/babel
