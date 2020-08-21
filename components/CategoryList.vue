@@ -1,3 +1,9 @@
+<!--
+ * @Author: ItKui
+ * @Date: 2020-08-04 16:51:04
+ * @LastEditTime: 2020-08-21 17:20:50
+ * @FilePath: \blog\components\CategoryList.vue
+-->
 <template>
   <div class="category-wrap">
     <ul class="category-list">
@@ -28,11 +34,12 @@ export default Vue.extend({
 .category-wrap {
   width: 250px;
   top: 95px;
+  max-height: calc(100% - 95px);
   bottom: 0;
   margin-left: 15px;
   position: fixed;
   z-index: 1;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .category-list li a {
