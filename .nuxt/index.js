@@ -12,8 +12,8 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_swplugin_464f5b6c from 'nuxt_plugin_swplugin_464f5b6c' // Source: .\\sw.plugin.js (mode: 'client')
-import nuxt_plugin_axios_200a8d31 from 'nuxt_plugin_axios_200a8d31' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_swplugin_e093ccb2 from 'nuxt_plugin_swplugin_e093ccb2' // Source: .\\sw.plugin.js (mode: 'client')
+import nuxt_plugin_axios_7e048b0e from 'nuxt_plugin_axios_7e048b0e' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ..\\plugins\\axios (mode: 'server')
 import nuxt_plugin_antdesign_75603550 from 'nuxt_plugin_antdesign_75603550' // Source: ..\\plugins\\ant-design (mode: 'all')
 import nuxt_plugin_fontawesome_999c0e4e from 'nuxt_plugin_fontawesome_999c0e4e' // Source: ..\\plugins\\font-awesome (mode: 'all')
@@ -21,7 +21,7 @@ import nuxt_plugin_index_33bf821f from 'nuxt_plugin_index_33bf821f' // Source: .
 import nuxt_plugin_eventbus_bb49754e from 'nuxt_plugin_eventbus_bb49754e' // Source: ..\\plugins\\event-bus (mode: 'all')
 import nuxt_plugin_baidustats_28060ff9 from 'nuxt_plugin_baidustats_28060ff9' // Source: ..\\plugins\\baidu-stats (mode: 'client')
 import nuxt_plugin_tuieditor_7f97c5c6 from 'nuxt_plugin_tuieditor_7f97c5c6' // Source: ..\\plugins\\tui-editor (mode: 'client')
-import nuxt_plugin_plugin_0c6e1420 from 'nuxt_plugin_plugin_0c6e1420' // Source: .\\auth\\plugin.js (mode: 'all')
+import nuxt_plugin_plugin_7ef7783d from 'nuxt_plugin_plugin_7ef7783d' // Source: .\\auth\\plugin.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -178,12 +178,12 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (process.client && typeof nuxt_plugin_swplugin_464f5b6c === 'function') {
-    await nuxt_plugin_swplugin_464f5b6c(app.context, inject)
+  if (process.client && typeof nuxt_plugin_swplugin_e093ccb2 === 'function') {
+    await nuxt_plugin_swplugin_e093ccb2(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_200a8d31 === 'function') {
-    await nuxt_plugin_axios_200a8d31(app.context, inject)
+  if (typeof nuxt_plugin_axios_7e048b0e === 'function') {
+    await nuxt_plugin_axios_7e048b0e(app.context, inject)
   }
 
   if (process.server && typeof nuxt_plugin_axios_2228ef02 === 'function') {
@@ -214,8 +214,8 @@ async function createApp (ssrContext) {
     await nuxt_plugin_tuieditor_7f97c5c6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_0c6e1420 === 'function') {
-    await nuxt_plugin_plugin_0c6e1420(app.context, inject)
+  if (typeof nuxt_plugin_plugin_7ef7783d === 'function') {
+    await nuxt_plugin_plugin_7ef7783d(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

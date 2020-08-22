@@ -6476,10 +6476,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-github-headings@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-github-headings/-/markdown-it-github-headings-2.0.0.tgz#f8d21ed438c4921d594e32c285ecb58b638615ce"
-  integrity sha512-7ET0QiS2UWCM4hZraWVT9Df0PzuTQwK//3XM1q8vtXImUCRNGwG4bapa6ToDL8M4jkPeYSMrTiTvdJqwJifC4Q==
+markdown-it-github-headings@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npm.taobao.org/markdown-it-github-headings/download/markdown-it-github-headings-1.1.2.tgz#e2bbdf864fa284eb5ceb80be5da4712df2e328f2"
+  integrity sha1-4rvfhk+ihOtc64C+XaRxLfLjKPI=
   dependencies:
     github-slugger "^1.1.1"
     innertext "^1.0.1"

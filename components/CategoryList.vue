@@ -1,11 +1,11 @@
 <!--
  * @Author: ItKui
  * @Date: 2020-08-04 16:51:04
- * @LastEditTime: 2020-08-21 17:20:50
+ * @LastEditTime: 2020-08-22 17:35:49
  * @FilePath: \blog\components\CategoryList.vue
 -->
 <template>
-  <div class="category-wrap">
+  <div class="category-wrap" style="margin-right: -8px;">
     <ul class="category-list">
       <li v-for="item in categories" :key="item._id">
         <nuxt-link :to="item.alias ? `/blog/${item.alias}` : '/'" exact active-class="active">
@@ -40,6 +40,10 @@ export default Vue.extend({
   position: fixed;
   z-index: 1;
   overflow: auto;
+}
+
+.category-wrap::-webkit-scrollbar {
+  width: 0;
 }
 
 .category-list li a {
