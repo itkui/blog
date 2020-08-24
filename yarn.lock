@@ -1407,7 +1407,7 @@
     lodash "^4.17.15"
     nanoid "^2.1.8"
 
-"@nuxtjs/axios@^5.9.0", "@nuxtjs/axios@^5.9.5":
+"@nuxtjs/axios@^5.9.0", "@nuxtjs/axios@^5.9.3":
   version "5.9.5"
   resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.9.5.tgz#5adc0acc4deb7e1d67ab7240c741a401a6c01823"
   integrity sha512-5sMsl5PbNSbAOou75wN2ztDAfGi6pU12zZQvfkDBz3s9KnKST/Azfc1FLw2Y8TR4UaDv074vt20oxK+z7AnH1A==
@@ -2470,13 +2470,6 @@ async@^1.5.0:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
   integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
-
-async@^2.4.1:
-  version "2.6.3"
-  resolved "https://registry.npm.taobao.org/async/download/async-2.6.3.tgz?cache=0&sync_timestamp=1582513244496&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fasync%2Fdownload%2Fasync-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
-  integrity sha1-1yYl4jRKNlbjo61Pp0n6gymdgv8=
-  dependencies:
-    lodash "^4.17.14"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -4662,16 +4655,6 @@ extract-css-chunks-webpack-plugin@^4.7.1:
     webpack-external-import "^1.1.0-beta.3"
     webpack-sources "^1.1.0"
 
-extract-text-webpack-plugin@^4.0.0-beta.0:
-  version "4.0.0-beta.0"
-  resolved "https://registry.npm.taobao.org/extract-text-webpack-plugin/download/extract-text-webpack-plugin-4.0.0-beta.0.tgz#f7361d7ff430b42961f8d1321ba8c1757b5d4c42"
-  integrity sha1-9zYdf/QwtClh+NEyG6jBdXtdTEI=
-  dependencies:
-    async "^2.4.1"
-    loader-utils "^1.1.0"
-    schema-utils "^0.4.5"
-    webpack-sources "^1.1.0"
-
 extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
@@ -6449,10 +6432,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-github-headings@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npm.taobao.org/markdown-it-github-headings/download/markdown-it-github-headings-1.1.2.tgz#e2bbdf864fa284eb5ceb80be5da4712df2e328f2"
-  integrity sha1-4rvfhk+ihOtc64C+XaRxLfLjKPI=
+markdown-it-github-headings@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-github-headings/-/markdown-it-github-headings-2.0.0.tgz#f8d21ed438c4921d594e32c285ecb58b638615ce"
+  integrity sha512-7ET0QiS2UWCM4hZraWVT9Df0PzuTQwK//3XM1q8vtXImUCRNGwG4bapa6ToDL8M4jkPeYSMrTiTvdJqwJifC4Q==
   dependencies:
     github-slugger "^1.1.1"
     innertext "^1.0.1"
@@ -6700,15 +6683,10 @@ mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@^2.21.0:
+moment@^2.21.0, moment@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
-
-moment@^2.27.0:
-  version "2.27.0"
-  resolved "https://registry.npm.taobao.org/moment/download/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
-  integrity sha1-i/9OPiaiNiIN/j423nVrbrqgEF0=
 
 mongodb@3.4.1:
   version "3.4.1"
@@ -8796,14 +8774,6 @@ sax@>=0.6.0, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-
-schema-utils@^0.4.5:
-  version "0.4.7"
-  resolved "https://registry.npm.taobao.org/schema-utils/download/schema-utils-0.4.7.tgz#ba74f597d2be2ea880131746ee17d0a093c68187"
-  integrity sha1-unT1l9K+LqiAExdG7hfQoJPGgYc=
-  dependencies:
-    ajv "^6.1.0"
-    ajv-keywords "^3.1.0"
 
 schema-utils@^1.0.0:
   version "1.0.0"

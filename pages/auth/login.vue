@@ -6,6 +6,7 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
 import FirstLogin from '@/components/FirstLogin.vue';
 import LoginAccount from '@/components/LoginAccount.vue';
 import { Context } from '@nuxt/types/index';

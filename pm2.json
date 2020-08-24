@@ -2,6 +2,7 @@
   "apps": [{
     "name": "iBlog",
     "script": "yarn",
-    "args": "start"
+    "args": "start",
+    "interpreter": "/bin/bash"
   }]
 }

@@ -45,9 +45,9 @@
 </template>
 
 <script lang="ts">
-import { IResp } from '@/types';
 import Vue from 'vue';
 import md5 from 'blueimp-md5';
+import { IResp } from '@/types';
 export default Vue.extend({
   name: 'PageInitAccount',
   layout: 'auth',

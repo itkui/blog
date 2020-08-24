@@ -1,11 +1,11 @@
 <!--
  * @Author: ItKui
- * @Date: 2020-08-04 16:51:04
- * @LastEditTime: 2020-08-22 17:35:49
+ * @Date: 2020-08-24 18:25:18
+ * @LastEditTime: 2020-08-24 18:26:06
  * @FilePath: \blog\components\CategoryList.vue
 -->
 <template>
-  <div class="category-wrap" style="margin-right: -8px;">
+  <div class="category-wrap">
     <ul class="category-list">
       <li v-for="item in categories" :key="item._id">
         <nuxt-link :to="item.alias ? `/blog/${item.alias}` : '/'" exact active-class="active">

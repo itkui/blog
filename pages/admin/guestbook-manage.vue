@@ -105,6 +105,8 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
+import moment from 'moment';
 import { FieldDecoratorOptions } from 'ant-design-vue/types/form/form';
 import { IResp } from '@/types';
 import CommentContent from '@/components/CommentContent.vue';

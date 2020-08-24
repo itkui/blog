@@ -6,10 +6,10 @@
   </div>
 </template>
 <script lang="ts">
+import Vue from 'vue';
 import CommentList from '@/components/CommentList.vue';
 import 'highlight.js/styles/tomorrow.css';
 import { ISetting } from '@/types/schema';
-import Vue from 'vue';
 export default Vue.extend({
   name: 'PageGuestBook',
   components: {

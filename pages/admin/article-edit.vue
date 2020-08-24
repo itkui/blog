@@ -207,6 +207,7 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
 import MdCheatSheet from '@/components/MdCheatSheet.vue';
 import { IResp } from '@/types';
 import { IPost } from '@/types/schema';
