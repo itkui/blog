@@ -51,7 +51,7 @@ const config: Configuration = {
    */
   plugins: [
     { src: '@/plugins/axios', mode: 'server' },
-    '@/plugins/ant-design',
+    // '@/plugins/ant-design',
     '@/plugins/font-awesome',
     '@/plugins/web-font/index',
     '@/plugins/event-bus',
@@ -103,6 +103,7 @@ const config: Configuration = {
     /*
      ** You can extend webpack config here
      */
+    analyze: true,
     extend () {},
     loaders: {
       less: {
