@@ -336,12 +336,11 @@
 import { FieldDecoratorOptions } from 'ant-design-vue/types/form/form';
 import { IResp } from '@/types';
 import { ICategory } from '@/types/schema';
-import Vue from 'vue';
-import moment from 'moment';
+import { Context } from '@nuxt/types/index';
 export default Vue.extend({
   name: 'PageArticleManage',
   layout: 'admin',
-  async asyncData ({ $axios }) {
+  async asyncData ({ $axios }: Context) {
     const { code, data }: IResp = await $axios.$get('/api/admin/categories');
     if (code === 1) {
       return {

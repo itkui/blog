@@ -8,7 +8,7 @@
 <script lang="ts">
 import FirstLogin from '@/components/FirstLogin.vue';
 import LoginAccount from '@/components/LoginAccount.vue';
-import Vue from 'vue';
+import { Context } from '@nuxt/types/index';
 export default Vue.extend({
   name: 'PageLogin',
   layout: 'auth',
@@ -16,7 +16,7 @@ export default Vue.extend({
     FirstLogin,
     LoginAccount
   },
-  async asyncData ({ $axios }) {
+  async asyncData ({ $axios }: Context) {
     let isFirst: boolean;
     const { code, data } = await $axios.$get('/api/auth/exists');
     if (code === 1 && !data.exists) {

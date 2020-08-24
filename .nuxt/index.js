@@ -12,6 +12,8 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
+import nuxt_plugin_swplugin_e093ccb2 from 'nuxt_plugin_swplugin_e093ccb2' // Source: .\\sw.plugin.js (mode: 'client')
+import nuxt_plugin_nuxticons_65b956fa from 'nuxt_plugin_nuxticons_65b956fa' // Source: .\\nuxt-icons.js (mode: 'all')
 import nuxt_plugin_axios_7e048b0e from 'nuxt_plugin_axios_7e048b0e' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ..\\plugins\\axios (mode: 'server')
 import nuxt_plugin_antdesign_75603550 from 'nuxt_plugin_antdesign_75603550' // Source: ..\\plugins\\ant-design (mode: 'all')
@@ -176,6 +178,14 @@ async function createApp (ssrContext) {
   }
 
   // Plugin execution
+
+  if (process.client && typeof nuxt_plugin_swplugin_e093ccb2 === 'function') {
+    await nuxt_plugin_swplugin_e093ccb2(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_nuxticons_65b956fa === 'function') {
+    await nuxt_plugin_nuxticons_65b956fa(app.context, inject)
+  }
 
   if (typeof nuxt_plugin_axios_7e048b0e === 'function') {
     await nuxt_plugin_axios_7e048b0e(app.context, inject)

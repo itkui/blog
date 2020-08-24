@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="guestbook-manage-page">
     <div class="page-header">
       留言管理
     </div>
@@ -74,9 +74,7 @@
           @change="onTableChange"
         >
           <template slot="content" slot-scope="text, row">
-            <div class="comment-body">
-              <tui-editor-viewer :value="row.content" />
-            </div>
+            <comment-content :content="row.content" />
           </template>
           <template slot="person" slot-scope="text, row">
             <a
@@ -109,11 +107,14 @@
 <script lang="ts">
 import { FieldDecoratorOptions } from 'ant-design-vue/types/form/form';
 import { IResp } from '@/types';
-import Vue from 'vue';
-import moment from 'moment';
+import CommentContent from '@/components/CommentContent.vue';
 export default Vue.extend({
   name: 'PageGuestbookManage',
   layout: 'admin',
+  components: {
+    CommentContent
+  },
+
   data () {
     return {
       form: this.$form.createForm(this),
@@ -348,15 +349,21 @@ export default Vue.extend({
 .data-wrap .ant-table-body {
   overflow-x: auto !important;
 }
-
+</style>
+<style>
 .comment-body {
   width: 100%;
   padding: 12px 15px;
-  overflow: visible;
+  overflow: auto;
+  max-height: 300px;
   font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 3px;
   margin: -6px;
   background: #fff;
+}
+.comment-body img {
+  max-height: 150px;
+  cursor: pointer;
 }
 </style>

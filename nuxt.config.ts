@@ -51,21 +51,20 @@ const config: Configuration = {
    */
   plugins: [
     { src: '@/plugins/axios', mode: 'server' },
-    // '@/plugins/ant-design',
+    '@/plugins/ant-design',
     '@/plugins/font-awesome',
     '@/plugins/web-font/index',
     '@/plugins/event-bus',
     { src: '@/plugins/baidu-stats', mode: 'client' },
     { src: '@/plugins/tui-editor', mode: 'client' }
   ],
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/pwa'],
   /*
    ** Nuxt.js modules
    */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth',
-    '@nuxtjs/pwa'
+    '@nuxtjs/auth'
   ],
   auth: {
     strategies: {
@@ -103,8 +102,8 @@ const config: Configuration = {
     /*
      ** You can extend webpack config here
      */
-    analyze: true,
     extend () {},
+    cache: true,
     loaders: {
       less: {
         modifyVars: {
@@ -112,6 +111,11 @@ const config: Configuration = {
           'outline-width': '0'
         },
         javascriptEnabled: true
+      }
+    },
+    optimization: {
+      splitChunks: {
+        maxSize: 1000 * 2000
       }
     }
   },

@@ -63,6 +63,7 @@ export class Post {
       schema.virtual('html').get(function (this: any) {
         if (this.content) {
           const md = new MarkdownIt({
+            html: true,
             breaks: true,
             // linkify: true,
             highlight (str, lang) {
@@ -103,15 +104,20 @@ export class Post {
               }
               return (
                 '<pre class="hljs"><div class="pre-header"><div class="pre-header-left"><div></div><div></div><div></div></div><div class="pre-header-right">' +
-              showLang +
-              '</div></div><code>' +
-              code +
-              '</code></pre>'
+                    showLang +
+                    '</div></div><code>' +
+                    code +
+                    '</code></pre>'
               );
             }
           }).use(MarkdownItGithubHeadings)
             .use(markdownItTaskLists);
-          return md.render(this.content);
+          let html = md.render(this.content);
+          html = html.replace(
+            /:([\w-]+?):/g,
+            '<i class="icon-emoji" style="background-image: url(/images/emojis/$1.png);"></i>'
+          );
+          return html;
         }
         return '';
       });

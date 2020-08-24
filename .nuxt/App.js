@@ -7,7 +7,6 @@ import {
 } from './utils'
 
 import NuxtLoading from './components/nuxt-loading.vue'
-import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\node_modules\\ant-design-vue\\dist\\antd.less'
 
@@ -22,7 +21,7 @@ import _6f6c098b from '..\\layouts\\default.vue'
 const layouts = { "_admin": _77068119,"_auth": _2d217e9e,"_default": _6f6c098b }
 
 export default {
-  head: {"title":"崛起的青苔","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"基于 Node.js 的开源个人博客系统。"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"blog-of-itkui"},{"hid":"author","name":"author","content":"itkui"},{"hid":"theme-color","name":"theme-color","content":"#f80"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"blog-of-itkui"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"blog-of-itkui"},{"hid":"og:description","name":"og:description","property":"og:description","content":"基于 Node.js 的开源个人博客系统。"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.07856b40.json"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
+  head: {"title":"崛起的青苔","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"基于 Node.js 的开源个人博客系统。"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"blog-of-itkui"},{"hid":"author","name":"author","content":"itkui"},{"hid":"theme-color","name":"theme-color","content":"#f80"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"blog-of-itkui"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"blog-of-itkui"},{"hid":"og:description","name":"og:description","property":"og:description","content":"基于 Node.js 的开源个人博客系统。"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.c76bea6a.json"},{"rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64.91SjZBK9zE1.png"},{"rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512.91SjZBK9zE1.png","sizes":"512x512"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
 
   render (h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
@@ -56,7 +55,7 @@ export default {
       }
     }, [
       loadingEl,
-      h(NuxtBuildIndicator),
+
       transitionEl
     ])
   },
@@ -166,10 +165,6 @@ export default {
     },
 
     setLayout (layout) {
-      if(layout && typeof layout !== 'string') {
-        throw new Error('[nuxt] Avoid using non-string value as layout property.')
-      }
-
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }

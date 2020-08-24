@@ -1,5 +1,7 @@
 .article-content,
-.article-edit .tui-editor-contents {
+.article-edit .tui-editor-contents,
+.profile-container,
+.profile-settings .tui-editor-contents {
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
@@ -127,15 +129,21 @@
   }
 
   pre {
-    padding: 12px 16px 0;
-    border-radius: 8px;
-    background: #f6f8fa;
-    border: 1px solid #eee;
+    padding: 0;
+    border: 0;
+
+    &.hljs {
+      padding: 12px 16px;
+      margin: 0;
+      border-radius: 8px;
+      background: #f6f8fa;
+      border: 1px solid #eee;
+    }
 
     code {
       background-color: inherit;
       color: inherit;
-      padding: 0 0 12px 0;
+      padding: 0;
       margin: 0;
     }
 
@@ -214,4 +222,12 @@
     padding-top: 1px;
     user-select: none;
   }
+}
+
+.article-content pre.hljs {
+  margin-bottom: 16px;
+}
+
+.article-content img {
+  cursor: pointer;
 }

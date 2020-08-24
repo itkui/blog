@@ -35,11 +35,7 @@
               </a>
             </div>
           </div>
-          <div class="comment-body">
-            <client-only>
-              <tui-editor-viewer :value="comment.content" />
-            </client-only>
-          </div>
+          <comment-content :content="comment.content" />
         </div>
       </div>
     </div>
@@ -49,7 +45,11 @@
 import Vue, { PropOptions } from 'vue';
 import moment from 'moment';
 import { IComment } from '@/types/schema';
+import CommentContent from '@/components/CommentContent.vue';
 export default Vue.extend({
+  components: {
+    CommentContent
+  },
   props: {
     comment: {
       type: Object,
@@ -200,5 +200,10 @@ export default Vue.extend({
   .timeline-comment:before {
     display: none;
   }
+}
+</style>
+<style>
+.comment-body img {
+  cursor: pointer;
 }
 </style>
